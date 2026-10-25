@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Design tokens. Ink blue for structure, a highlighter yellow that is only
+   ever used to mark sentences the extractor picked out of a transcript. */
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+
+  --color-paper: #f5f6f8;
+  --color-sheet: #ffffff;
+  --color-ink: #1c2430;
+  --color-muted: #5b6573;
+  --color-rule: #d9dee5;
+  --color-navy: #1f3a5f;
+  --color-navy-soft: #e3e9f1;
+  --color-marker: #f6e27a;
+  --color-marker-soft: #fbf3c4;
+  --color-ok: #2f7d4f;
+  --color-ok-soft: #e2f1e7;
+  --color-warn: #8a5a00;
+  --color-warn-soft: #fbeccb;
+  --color-bad: #a8261c;
+  --color-bad-soft: #f8e1de;
+}
+
+html { background: var(--color-paper); color: var(--color-ink); }
+body { font-family: var(--font-sans); font-size: 15px; line-height: 1.5; }
+
+:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 2px; border-radius: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Shared building blocks */
+.btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  border: 1px solid var(--color-navy); background: var(--color-navy); color: white;
+  padding: .45rem .9rem; border-radius: 4px; font-weight: 500; font-size: 14px;
+  cursor: pointer;
+}
+.btn:hover { background: #172d4a; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-quiet {
+  display: inline-flex; align-items: center; gap: .4rem;
+  border: 1px solid var(--color-rule); background: var(--color-sheet); color: var(--color-ink);
+  padding: .45rem .9rem; border-radius: 4px; font-weight: 500; font-size: 14px; cursor: pointer;
+}
+.btn-quiet:hover { border-color: var(--color-muted); }
+.btn-quiet:disabled { opacity: .5; cursor: not-allowed; }
+.btn-danger { color: var(--color-bad); }
+.btn-danger:hover { border-color: var(--color-bad); }
+
+.field {
+  width: 100%; border: 1px solid var(--color-rule); background: var(--color-sheet);
+  border-radius: 4px; padding: .5rem .65rem; font: inherit;
+}
+.field:focus { border-color: var(--color-navy); outline: none; box-shadow: 0 0 0 2px var(--color-navy-soft); }
+
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th { text-align: left; font-weight: 500; color: var(--color-muted); padding: .5rem .75rem; border-bottom: 1px solid var(--color-rule); white-space: nowrap; }
+.table td { padding: .6rem .75rem; border-bottom: 1px solid var(--color-rule); vertical-align: top; }
+.table tr:last-child td { border-bottom: none; }
+.num { font-variant-numeric: tabular-nums; text-align: right; }
+
+.reading { font-family: var(--font-serif); font-size: 17px; line-height: 1.65; max-width: 68ch; }
+mark.hl { background: linear-gradient(transparent 12%, var(--color-marker) 12%, var(--color-marker) 88%, transparent 88%); color: inherit; padding: 0 .1em; }

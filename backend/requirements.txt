@@ -1,0 +1,21 @@
+# Web
+flask>=3.0,<4
+flask-cors>=4.0,<7
+
+# Numerics and classic NLP
+numpy>=1.26
+scikit-learn>=1.4
+rouge-score>=0.1.2
+spacy>=3.7,<4
+# spaCy English model (same as `python -m spacy download en_core_web_sm`)
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+
+# Pretrained transformer models (downloaded from Hugging Face on first use)
+torch>=2.2
+transformers>=4.40
+sentence-transformers>=3.0
+keybert>=0.8
+faiss-cpu>=1.8
+
+# Tests
+pytest>=8

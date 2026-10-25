@@ -1,0 +1,27 @@
+Maya: Okay, let's get started. The goal today is to agree on the plan for moving the billing service from the old data centre to the new cloud platform.
+Daniel: Before we start, I shared the latency report from last week. The new region in Frankfurt was about forty milliseconds faster for our European customers.
+Maya: That's good news. So the main question is timing. Priya, where are we with the database migration scripts?
+Priya: The scripts are written, but I have only tested them against a copy of the staging database. I need to run them against a full production snapshot before I trust them.
+Maya: How long would that take?
+Priya: Probably two days. I can have the results by Thursday.
+Daniel: One concern is the payment provider. Their webhook configuration still points at the old IP addresses, and if we switch without updating it we could miss payment confirmations.
+Maya: That's a real risk. Daniel, can you own that?
+Daniel: Yes. I will contact Stripe support and update the webhook endpoints by Friday.
+Omar: I also want to raise the monitoring gap. Our alerts are still defined in the old Nagios setup, and nothing is configured in the new platform yet.
+Maya: Right. We should not migrate anything without alerts in place.
+Omar: I can port the alert rules to Grafana. I need about a week, so realistically by next week.
+Priya: Is the plan still to do the cut-over on a weekend?
+Maya: Yes. After some discussion with finance, we decided to do the cut-over on Saturday the 14th, during the low-traffic window between two and six in the morning.
+Daniel: Do we have a rollback plan if the migration fails halfway?
+Priya: Not a written one. The scripts are reversible, but the rollback has never been rehearsed.
+Maya: Then that is the open question for this week. Who signs off on the rollback procedure?
+Omar: I think it should be the infrastructure lead, but that role is still not yet decided after the reorganisation.
+Maya: Okay. Let's keep that as an open question and raise it with Elena on Monday.
+Daniel: One more thing. The invoice export job runs at midnight on the first of every month. If the cut-over slips to the end of the month, that job may not run correctly.
+Maya: Good point. We agreed to freeze the date, so the 14th it is. If anything slips, we postpone to the following month rather than risk the invoice run.
+Priya: Should I also prepare a dry run on the staging cluster?
+Maya: Yes, please do a full dry run on staging next week and write down how long each step takes.
+Omar: I will also need access to the new cloud account. My request is still blocked by the security team.
+Maya: I'll chase that today. Let's summarise. Priya tests the scripts on a production snapshot by Thursday and runs the staging dry run next week. Daniel updates the payment webhooks by Friday. Omar ports the alerts by next week. The cut-over is on Saturday the 14th. The rollback sign-off remains open.
+Daniel: Sounds good.
+Maya: Thanks everyone, see you on Monday.

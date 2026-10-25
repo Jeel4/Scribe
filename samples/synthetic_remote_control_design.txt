@@ -1,0 +1,20 @@
+[A] Right, so this is the conceptual design meeting. Last time we agreed the remote should be simple and aimed at people who find current remotes confusing.
+[B] Yeah. I looked at the user survey again. Most people said they only use about five buttons, the power, the volume, the channels and the menu.
+[A] So we could drop a lot of buttons.
+[C] From the technical side, the cheapest option is a basic infrared chip with a rubber push-button pad. A scroll wheel or an LCD screen would push the cost over our budget of twelve euros fifty.
+[B] But people also said they want something that looks fashionable. A plain grey box won't sell.
+[D] For marketing I think the fruit and vegetable trend is strong this year. We could use bright colours and a soft, curved case.
+[C] The curved case is possible, but a double-curved case needs a more expensive plastic. I'm not sure we can afford it.
+[A] Okay. What about the battery?
+[C] A standard battery is fine. A kinetic battery would be nice but it might not fit in a small case.
+[B] I would also like a locator function, so it beeps when you lose it. That was a big complaint in the survey.
+[C] That needs a speaker and a small receiver. It adds cost and I don't know yet if it fits the budget.
+[A] So the locator is still an open question. Let's decide the basics first. We agreed to use the simple infrared chip and push buttons, and a single-curved case in a bright colour.
+[D] Should the company logo be on the front?
+[A] Yes, the logo and the company colours have to be on it, that's a requirement from management.
+[C] I will make a cost calculation for the locator function before the next meeting.
+[D] I'll prepare two or three colour options for the case.
+[B] And I need to check with the survey data whether younger users really care about the locator.
+[A] Good. Next meeting is the detailed design, so please have that ready by then. Is there anything else?
+[D] No, that's everything from me.
+[A] Okay, thanks everyone.

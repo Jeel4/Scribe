@@ -1,0 +1,14 @@
+Lena: Morning everyone, quick standup. Tom, you first.
+Tom: Yesterday I finished the search filters on the orders page. Today I'm writing tests for them. No blockers.
+Lena: Great. Aisha?
+Aisha: I'm still on the PDF export bug. It only happens with very long tables, and I can't reproduce it locally yet. It might be a memory issue on the server.
+Lena: Do you need help with that?
+Aisha: Maybe. Tom, could you pair with me for an hour this afternoon?
+Tom: Sure, after lunch works.
+Lena: Okay. On my side, the design review for the new dashboard is tomorrow. We decided to keep the current navigation and only change the charts.
+Aisha: Is the release still planned for next week?
+Lena: That's not yet decided. If the export bug isn't fixed, we may need to delay the release.
+Tom: I should also mention that the staging server certificate expires on 11/30. Someone needs to renew it.
+Lena: Thanks, Tom. Aisha will renew the certificate this week, since she has the admin access.
+Aisha: Fine, I'll do it by Friday.
+Lena: Good. That's it, thanks all.
